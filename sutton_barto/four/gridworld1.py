@@ -44,7 +44,7 @@ def random_policy(action, state):
 
 
 if __name__ == '__main__':
-    logging.basicConfig(level='INFO')
+    logging.basicConfig(level='INFO', format='%(message)s')
     v = {i: 0 for i in range(1,15)}
     iteration = 0
     while True:
@@ -67,10 +67,10 @@ if __name__ == '__main__':
 
         iteration += 1
         logging.info('state values on iteration %d', iteration)
-        logging.info('\t    %.1f %.1f %.1f', v[1], v[2], v[3])
+        logging.info('\t       %.1f %.1f %.1f', v[1], v[2], v[3])
         logging.info('\t %.1f %.1f %.1f %.1f', v[4], v[5], v[6], v[7])
         logging.info('\t %.1f %.1f %.1f %.1f', v[8], v[9], v[10], v[11])
-        logging.info('\t     %.1f %.1f %.1f', v[12], v[13], v[14])
+        logging.info('\t       %.1f %.1f %.1f', v[12], v[13], v[14])
 
         if iteration == 1000:
             logging.info('non-convergence: stopping on iteration %d', iteration)

@@ -56,7 +56,7 @@ def random_policy(action, state):
     return 0.25
 
 if __name__ == '__main__':
-    logging.basicConfig(level='INFO')
+    logging.basicConfig(level='INFO', format='%(message)s')
     v = {i: 0 for i in range(1,16)}
     iteration = 0
     while True:

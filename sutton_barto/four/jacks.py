@@ -161,7 +161,7 @@ def print_value_function(v):
         logging.info('%s| %s', str(i).ljust(2), values)
 
 if __name__ == '__main__':
-    logging.basicConfig(level='INFO')
+    logging.basicConfig(level='INFO', format='%(message)s')
 
     # the policy function -- start by doing nothing
     p = collections.OrderedDict()

@@ -68,7 +68,7 @@ def build_policy(p_h, gamma, eps, v):
     return p
 
 if __name__ == '__main__':
-    logging.basicConfig(level='INFO')
+    logging.basicConfig(level='INFO', format='%(message)s')
     gamma = Decimal(1)
     eps = Decimal(1e-20)
 
