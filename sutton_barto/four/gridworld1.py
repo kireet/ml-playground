@@ -66,11 +66,12 @@ if __name__ == '__main__':
             break
 
         iteration += 1
-        logging.info('state values on iteration %d', iteration)
-        logging.info('\t       %.1f %.1f %.1f', v[1], v[2], v[3])
-        logging.info('\t %.1f %.1f %.1f %.1f', v[4], v[5], v[6], v[7])
-        logging.info('\t %.1f %.1f %.1f %.1f', v[8], v[9], v[10], v[11])
-        logging.info('\t %.1f %.1f %.1f', v[12], v[13], v[14])
+        if iteration < 5 or iteration % 10 == 0:
+            logging.info('state values on iteration %d', iteration)
+            logging.info('\t       %.1f %.1f %.1f', v[1], v[2], v[3])
+            logging.info('\t %.1f %.1f %.1f %.1f', v[4], v[5], v[6], v[7])
+            logging.info('\t %.1f %.1f %.1f %.1f', v[8], v[9], v[10], v[11])
+            logging.info('\t %.1f %.1f %.1f', v[12], v[13], v[14])
 
         if iteration == 1000:
             logging.info('non-convergence: stopping on iteration %d', iteration)
